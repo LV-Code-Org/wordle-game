@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import Input from './Input';
 import StaticInput from './StaticInput';
-import wordList from '../wordList';
+import answers from '../answers';
+import Keyboard from "./Keyboard"
 
 const generateRandomWord = () => {
-    return wordList[Math.floor(Math.random() * wordList.length)].toUpperCase();
+    return answers[Math.floor(Math.random() * answers.length)].toUpperCase();
 }
 
 const Board = () => {
@@ -13,7 +14,7 @@ const Board = () => {
     const [currentAttempt, setCurrentAttempt] = useState(1);
     const [solved, setSolved] = useState(false)
 
-    const blank = new Array(5).fill(["", "#3c3c3c"])
+    const blank = new Array(5).fill(["", "#121213"])
 
     const handleGuess = (guess) => {
         const currentGuess = guess.join("");
@@ -40,7 +41,7 @@ const Board = () => {
             } else if (target.includes(guess[i])) {
                 return '#c9b458';
             }
-            return '#3c3c3c';
+            return '#121213';
         });
     };
 
@@ -78,9 +79,12 @@ const Board = () => {
     }
 
     return (
-        <div className="Board">
-            {renderRows()}
-        </div>
+        <>
+            <div className="Board" style={{ marginBottom: "2vh" }}>
+                {renderRows()}
+            </div>
+            <Keyboard />
+        </>
     );
 }
 
