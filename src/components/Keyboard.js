@@ -7,7 +7,7 @@ const Keyboard = ({ usedLetters }) => {
         const row = []
         for (let i = 0; i < letters.length; i++) {
             row.push(
-                <div class="key" key={letters[i]}>
+                <div className="key" key={letters[i]}>
                     {letters[i]}
                 </div>
             )
@@ -15,23 +15,22 @@ const Keyboard = ({ usedLetters }) => {
         return row
     }
 
-    const rowStyle = (width) => {
-        return {
-            justifyContent: "center",
-            flexDirection: "row",
-            display: "flex",
-        }
+    const rowStyle = {
+        justifyContent: "center",
+        flexDirection: "row",
+        display: "flex",
     }
+
 
     return (
         <center>
-            <div style={rowStyle(35)}>
+            <div style={rowStyle}>
                 {renderRow("QWERTYUIOP")}
             </div>
-            <div style={rowStyle(30)}>
+            <div style={rowStyle}>
                 {renderRow("ASDFGHJKL")}
             </div>
-            <div style={rowStyle(24)}>
+            <div style={rowStyle}>
                 {renderRow("ZXCVBNM")}
             </div>
         </center>
