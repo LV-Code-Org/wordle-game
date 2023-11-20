@@ -1,14 +1,10 @@
 div .key {
-    /* height: 60px; */
     padding: 20px 15px;
-    /* width: 40px; */
     color: #fff;
     text-align: center;
-    background-color: #737373;
     border-radius: 5px;
     font-weight: 700;
     font-family: Arial;
     width: 1vw;
     margin: 3px;
-    /* background: #9a9a9a */
 }

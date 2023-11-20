@@ -45,8 +45,6 @@ const Input = (props) => {
                     for (let i = 0; i < evaluation.length; i++) {
                         newFeedback[i] = evaluation[i]
                     }
-
-                    console.log(zip([input, newFeedback]))
                     setFeedback(newFeedback);
                 }
             }

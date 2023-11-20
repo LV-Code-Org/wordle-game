@@ -3,7 +3,7 @@ import "../css/Input.css"
 
 const StaticInput = (props) => {
     return (
-        <div className="wordle-input" style={{ animation: "bounce 1s" }}>
+        <div className="wordle-input">
             {props.info.map((value, index) => (
                 <input
                     key={index}

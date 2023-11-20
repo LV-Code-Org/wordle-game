@@ -41,7 +41,7 @@ const Board = () => {
             } else if (target.includes(guess[i])) {
                 return '#c9b458';
             }
-            return '#121213';
+            return '#3c3c3c';
         });
     };
 
@@ -51,7 +51,6 @@ const Board = () => {
         for (let i = 0; i < 6; i++) {
             if (i < currentAttempt - 1) {
                 const previousGuess = guesses[i] || { guess: '', feedbackColors: [] };
-                console.log(zip([previousGuess.guess.split(''), previousGuess.feedbackColors]))
                 rows.push(
                     <StaticInput
                         key={i}
@@ -83,7 +82,7 @@ const Board = () => {
             <div className="Board" style={{ marginBottom: "2vh" }}>
                 {renderRows()}
             </div>
-            <Keyboard />
+            <Keyboard usedLetters={guesses}/>
         </>
     );
 }

@@ -6,10 +6,10 @@
 }
 
 .wordle-input input {
-  width: 55px;
-  height: 55px;
+  width: 50px;
+  height: 50px;
   text-align: center;
-  font-size: 33px;
+  font-size: 28px;
   margin-right: 5px;
   caret-color: transparent;
   border: 2px #3c3c3c solid;
